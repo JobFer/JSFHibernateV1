@@ -37,10 +37,12 @@ public class EmpleadoHome {
 		log.debug("persisting Empleado instance");
 		try {
 			sessionFactory.getCurrentSession().persist(transientInstance);
+			
 //			Session sesion = sessionFactory.openSession();
 //			sesion.beginTransaction();
 //			sesion.save(transientInstance);
 //			sesion.beginTransaction().commit();
+			
 			log.debug("persist successful");
 		} catch (RuntimeException re) {
 			log.error("persist failed", re);

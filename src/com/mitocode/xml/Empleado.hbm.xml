@@ -4,18 +4,23 @@
 
 <hibernate-mapping>
     <class name="com.mitocode.model.Empleado" table="empleado">
+    
         <id name="codEmpleado" type="java.lang.Integer">
             <column name="codEmpleado" />
 			<generator class="identity" />
         </id>
+        
         <property name="nombres" type="string">
             <column name="nombres" length="50" not-null="true" />
         </property>
+        
         <property name="apellidos" type="string">
             <column name="apellidos" length="50" not-null="true" />
         </property>
+        
         <property name="sexo" type="char">
             <column name="sexo" length="1" not-null="true" />
         </property>
+        
     </class>
 </hibernate-mapping>
