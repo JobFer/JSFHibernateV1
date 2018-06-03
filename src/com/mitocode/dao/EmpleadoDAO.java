@@ -27,9 +27,10 @@ public class EmpleadoDAO {
 			session.save(emp);
 //			session.save(null);
 			trans.commit();
+			
 		} catch (Exception ex) {
 			trans.rollback();
-			throw ex;
+			throw new Exception("Error al REGISTRAR en la BD");
 		} finally {
 			session.close();
 		}
@@ -42,9 +43,10 @@ public class EmpleadoDAO {
 			session.delete(emp);
 //			session.delete(null);
 			trans.commit();
+			
 		} catch (Exception ex) {
 			trans.rollback();
-			throw ex;
+			throw new Exception("Error al ELIMINAR en la BD");
 		} finally {
 			session.close();
 		}
@@ -57,10 +59,11 @@ public class EmpleadoDAO {
 			session.update(emp);
 //			session.update(null);
 			trans.commit();
+			
 		} catch (Exception ex) {
 			System.out.println("Excepcion: " + ex.getMessage());
 			trans.rollback();
-			throw ex;
+			throw new Exception("Error al MODIFICAR en la BD");
 		} finally {
 			session.close();
 		}
@@ -75,8 +78,9 @@ public class EmpleadoDAO {
 			cri.addOrder(Order.asc("apellidos"));
 			lstEmpleados = cri.list();
 			trans.commit();
+			
 		} catch (Exception ex) {
-			throw ex;
+			throw new Exception("Error al LISTAR de la BD");
 		}finally {
 			session.close();
 		}

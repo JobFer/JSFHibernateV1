@@ -90,6 +90,7 @@ public class EmpleadoBean {
 	}
 
 	public String cancelar() throws Exception {
+		System.out.println("Cancelar");
 		this.empleado = new Empleado();
 		return "exito";
 	}

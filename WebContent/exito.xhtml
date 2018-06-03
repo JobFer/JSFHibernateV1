@@ -38,7 +38,9 @@
 	</h:form>
 
 	<h:form rendered="#{usuarioBean.verificarSesion()}">
+	
 		<h:commandButton actionListener="#{empleadoBean.listar()}" value="Listar" />	
+		
 		<h:dataTable value="#{empleadoBean.lstEmpleados}" var="emp">
 			<h:column>
 				<f:facet name="header">
