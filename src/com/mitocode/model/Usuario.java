@@ -7,7 +7,6 @@ public class Usuario implements java.io.Serializable {
 	private int codUsuario;
 	private String nombre;
 	private String clave;	
-//	private Empleado empleado;
 
 	public Usuario() {
 	}
@@ -17,10 +16,9 @@ public class Usuario implements java.io.Serializable {
 		this.clave = clave;
 	}
 
-//	public Usuario(String nombre, String clave, Empleado empleado) {
+//	public Usuario(String nombre, String clave) {
 //		this.nombre = nombre;
 //		this.clave = clave;
-//		this.empleado = empleado;
 //	}
 
 	public int getCodUsuario() {
@@ -46,13 +44,5 @@ public class Usuario implements java.io.Serializable {
 	public void setClave(String clave) {
 		this.clave = clave;
 	}
-
-//	public Empleado getEmpleado() {
-//		return empleado;
-//	}
-//
-//	public void setEmpleado(Empleado empleado) {
-//		this.empleado = empleado;
-//	}	
 
 }

@@ -14,6 +14,5 @@
         <property name="clave" type="string">
             <column name="clave" length="16" not-null="true" />
         </property>        
-<!--         <one-to-one name="empleado" class="com.mitocode.model.Empleado"></one-to-one> -->
     </class>
 </hibernate-mapping>

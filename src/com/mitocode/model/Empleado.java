@@ -7,13 +7,11 @@ public class Empleado implements java.io.Serializable {
 	private String nombres;
 	private String apellidos;
 	private char sexo;
-//	private Usuario usuario;
 
 	public Empleado() {
 	}
 
 	public Empleado(Usuario usuario, String nombres, String apellidos, char sexo) {
-//		this.usuario = usuario;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.sexo = sexo;
@@ -50,13 +48,5 @@ public class Empleado implements java.io.Serializable {
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
-
-//	public Usuario getUsuario() {
-//		return usuario;
-//	}
-//
-//	public void setUsuario(Usuario usuario) {
-//		this.usuario = usuario;
-//	}
 
 }
