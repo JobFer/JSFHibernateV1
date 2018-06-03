@@ -69,10 +69,10 @@ public class UsuarioBean {
 //		return "index";
 	}
 	
-//	public boolean per() {
-//		UsuarioHome u = new UsuarioHome();
-//		u.persist(new Usuario(3,"aa","bb"));
-//		return true;
-//	}
+	public boolean per() {
+		UsuarioHome u = new UsuarioHome();
+		u.persist(new Usuario(3,"aa","bb"));
+		return true;
+	}
 	
 }

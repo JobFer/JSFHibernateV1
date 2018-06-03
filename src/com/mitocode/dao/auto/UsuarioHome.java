@@ -14,6 +14,7 @@ import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Example;
 
 import com.mitocode.model.Usuario;
@@ -44,19 +45,24 @@ public class UsuarioHome {
 	public void persist(Usuario transientInstance) {
 		log.debug("persisting Usuario instance");
 		try {
-			//Forma 1: Con openSession 
+			
+			//Forma 1: Con openSession
 			Session sesion = sessionFactory.openSession();
+			Transaction et = sesion.beginTransaction();
 			sesion.save(transientInstance);
-			sesion.close();
+			et.commit();			
 			
 //			//Forma 2: Con getCurrentSession
-//			sessionFactory.getCurrentSession().beginTransaction();
+//			Transaction et = sessionFactory.getCurrentSession().beginTransaction();
 //			sessionFactory.getCurrentSession().persist(transientInstance);
+//			et.commit();
 			
 			log.debug("persist successful");
 		} catch (RuntimeException re) {
 			log.error("persist failed", re);
 			throw re;
+		}catch (Exception e) {
+			System.out.println("Excepción: " + e.getMessage());
 		}
 	}
 
