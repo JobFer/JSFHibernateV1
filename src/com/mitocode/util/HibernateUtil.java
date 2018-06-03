@@ -19,7 +19,7 @@ public class HibernateUtil {
 //             config file. Si el cfg.xml esta en la raiz (default-package), el configure seria "()"
 //			sessionFactory = new AnnotationConfiguration().configure("com/mitocode/xml/hibernate.cfg.xml").buildSessionFactory();
 			
-        	//Lo anterior es antiguo (v3 HIBERNATE pero aun funciona). Lo mas reciente es v4 HIBERNATE.
+        	//Lo anterior es antiguo (HIBERNATE v3 pero aun funciona). Lo mas reciente sobre esto es de HIBERNATE v4.
         	Configuration configuration = new Configuration();
         	configuration.configure("com/mitocode/xml/hibernate.cfg.xml");
         	serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry(); 
