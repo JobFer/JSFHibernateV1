@@ -31,13 +31,13 @@ public class UsuarioDAO {
 			query.setString("clave", usuario.getClave()); //O "setParameter"
 			
 			
-			//Forma 1
-			if (!query.list().isEmpty()) {
-				us = (Usuario) query.list().get(0);
-			}
+//			//Forma 1
+//			if (!query.list().isEmpty()) {
+//				us = (Usuario) query.list().get(0);
+//			}
 
-//			//Forma 2			
-//			us = (Usuario) query.uniqueResult();
+			//Forma 2			
+			us = (Usuario) query.uniqueResult();
 			
 			session.close();
 			

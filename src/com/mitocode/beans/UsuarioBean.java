@@ -71,7 +71,7 @@ public class UsuarioBean {
 	
 	public boolean per() {
 		UsuarioHome u = new UsuarioHome();
-		u.persist(new Usuario(3,"aa","bb"));
+		u.persist(new Usuario("aa","bb"));
 		return true;
 	}
 	

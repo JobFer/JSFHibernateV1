@@ -16,7 +16,7 @@
         </property>
         
         <property name="clave" type="string">
-            <column name="clave" length="16" not-null="true" />
+            <column name="clave" length="50" not-null="true" />
         </property>      
           
     </class>

@@ -11,15 +11,10 @@ public class Usuario implements java.io.Serializable {
 	public Usuario() {
 	}
 
-	public Usuario(int codUsusrio, String nombre, String clave) {
+	public Usuario(String nombre, String clave) {
 		this.nombre = nombre;
 		this.clave = clave;
 	}
-
-//	public Usuario(String nombre, String clave) {
-//		this.nombre = nombre;
-//		this.clave = clave;
-//	}
 
 	public int getCodUsuario() {
 		return this.codUsuario;
